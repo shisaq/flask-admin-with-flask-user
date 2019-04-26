@@ -1,10 +1,11 @@
 {% extends "flask_user_layout.html" %}
 {% block content %}
     <h2>首页</h2>
-    <p><a href={{ url_for('user.register') }}>Register</a></p>
-    <p><a href={{ url_for('user.login') }}>Sign in</a></p>
-    <p><a href={{ url_for('home_page') }}>Home page</a> (accessible to anyone)</p>
-    <p><a href={{ url_for('member_page') }}>Member page</a> (login required)</p>
-    <p><a href={{ url_for('admin.index') }}>管理员界面</a> (login required)</p>
-    <p><a href={{ url_for('user.logout') }}>Sign out</a></p>
+    <p><a href={{ url_for('user.register') }}>注册</a></p>
+    <p><a href={{ url_for('user.login') }}>登录</a></p>
+    <p><a href={{ url_for('home_page') }}>首页</a>(所有人可访问)</p>
+    <p><a href={{ url_for('member_page') }}>用户列表</a>(登录后才可访问)</p>
+    <p><a href={{ url_for('admin.index') }}>管理员界面</a>(登录后才可访问)</p>
+    <p><a href={{ url_for('user.logout') }}>退出</a></p>
+    <input type="text"><button>搜索</button>
 {% endblock %}
